@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataxplan-mcp"
+version = "0.1.0"
+description = "MCP server for dataxplan: read PostgreSQL EXPLAIN plans for AI agents (bottlenecks, estimation errors, fixes, charts)."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Atakan Arikan" }]
+requires-python = ">=3.10"
+dependencies = ["dataxplan[viz,yaml]>=0.1.3", "mcp>=1.0"]
+keywords = [
+    "mcp", "model-context-protocol", "ai-agents", "postgresql", "postgres",
+    "explain", "query-plan", "performance", "query-optimization", "database",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+]
+
+[project.scripts]
+dataxplan-mcp = "dataxplan_mcp.server:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff", "mypy", "build"]
+
+[project.urls]
+Homepage = "https://github.com/arikanatakan/dataxplan-mcp"
+Repository = "https://github.com/arikanatakan/dataxplan-mcp"
+Issues = "https://github.com/arikanatakan/dataxplan-mcp/issues"
+Library = "https://github.com/arikanatakan/dataxplan"
+
+[tool.setuptools.packages.find]
+include = ["dataxplan_mcp*"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
