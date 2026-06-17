@@ -3,7 +3,7 @@
 # dataxplan-mcp
 
 [![CI](https://github.com/arikanatakan/dataxplan-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/arikanatakan/dataxplan-mcp/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/dataxplan-mcp)](https://pypi.org/project/dataxplan-mcp/)
+[![PyPI](https://img.shields.io/pypi/v/dataxplan-mcp?v=2)](https://pypi.org/project/dataxplan-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 An MCP server that exposes [dataxplan](https://github.com/arikanatakan/dataxplan),
